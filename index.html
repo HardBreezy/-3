@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сельскохозяйственный симулятор</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Сельскохозяйственный симулятор</h1>
+    </header>
+
+    <div class="game-area">
+        <div class="tools-panel">
+
+            <div class="tool-group">
+                <h3>Основные инструменты</h3>
+                <div class="tool-buttons">
+                    <button class="tool-btn active" id="tool-shovel">Лопата</button>
+                    <button class="tool-btn" id="tool-bucket">Ведро</button>
+                </div>
+            </div>
+
+            <div class="tool-group">
+                <h3>Семена для посадки</h3>
+                <div class="tool-buttons">
+                    <button class="tool-btn seed-btn" data-seed="bog">
+                        <span>🌿</span>
+                        <span>Болотник</span>
+                    </button>
+                    <button class="tool-btn seed-btn active" data-seed="potato">
+                        <span>🥔</span>
+                        <span>Картошка</span>
+                    </button>
+                    <button class="tool-btn seed-btn" data-seed="cactus">
+                        <span>🌵</span>
+                        <span>Кактус</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid" id="grid"></div>
+        </div>
+    </div>
+</div>
+
+<script src="Cell.js"></script>
+<script src="SoilCell.js"></script>
+<script src="WaterCell.js"></script>
+<script src="Plant.js"></script>
+<script src="BogPlant.js"></script>
+<script src="PotatoPlant.js"></script>
+<script src="CactusPlant.js"></script>
+<script src="Game.js"></script>
+</body>
+</html>
