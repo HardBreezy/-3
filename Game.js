@@ -87,13 +87,11 @@ class Game {
         }
 
         this.calculateAllMoisture();
-        this.updateStats();
     }
 
-    // Использование лопаты - ТОЛЬКО для выкапывания растений
+    // Использование лопаты
     useShovel(cell) {
         if (cell.type === 'soil' && cell.plant) {
-            // Выкапываем растение
             cell.plant = null;
             cell.render();
         }
@@ -132,15 +130,10 @@ class Game {
         }
 
         if (plant) {
-            // Если уже есть растение, заменяем его
             if (cell.plant) {
                 cell.plant = null;
             }
-
             cell.plant = plant;
-
-            // Мгновенно проверяем состояние растения после посадки
-            plant.checkState();
 
             cell.render();
         }
@@ -197,4 +190,5 @@ class Game {
 // Запуск игры при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
     new Game();
+
 });
