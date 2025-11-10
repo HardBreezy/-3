@@ -162,7 +162,6 @@ class Game {
             }
         }
 
-        // После пересчета влажности проверяем состояние всех растений
         this.checkAllPlants();
     }
 
@@ -176,7 +175,6 @@ class Game {
                     const beforeSymbol = cell.plant.symbol;
                     cell.plant.checkState();
 
-                    // Если состояние изменилось, перерисовываем
                     if (beforeAlive !== cell.plant.alive || beforeSymbol !== cell.plant.symbol) {
                         cell.render();
                     }
@@ -187,8 +185,8 @@ class Game {
 
 }
 
-// Запуск игры при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
     new Game();
 
 });
+
